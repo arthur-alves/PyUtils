@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 def valid_card_brand(brand, card_number):
     """
-    Validação de CC de acordo com a bandeira (DJANGO)
+    Validation credcard brand (DJANGO)
     """
-    # Validando Numero Cartão (Algoritmo de Luhn)
+    # validation (Luhn Alg.)
     try:
         int(card_number)
     except:
@@ -19,7 +19,7 @@ def valid_card_brand(brand, card_number):
     if not total % 10 is 0:
         raise ValidationError("Numero de cartão inválido")
         return False
-    # Validando bandeira
+    # validation brands
     brands = {
         "vi": r"^4\d{3}-?\d{4}-?\d{4}-?\d{4}$",
         "mv": r"^5[1-5]\d{2}-?\d{4}-?\d{4}-?\d{4}$",
